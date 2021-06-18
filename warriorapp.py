@@ -1,1 +1,0 @@
-from warriorgenerator import app

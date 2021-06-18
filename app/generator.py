@@ -1,6 +1,6 @@
 import random
 
-from data import names_prefix, names_suffix, banned
+from app.data import names_prefix, names_suffix, banned
 
 def generator(entries, category_list):
 

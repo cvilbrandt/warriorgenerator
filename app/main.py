@@ -1,4 +1,9 @@
-from app import app
+from flask import Flask, render_template, request, redirect
+
+from app.data import fur, clans, descriptors, entries_list
+from app.generator import generator
+
+app = Flask(__name__)
 
 # Display Index Page
 @app.route('/')
