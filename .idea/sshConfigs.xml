@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="starclan.cvilbrandt.com" id="1d6fb8dc-ef4b-4080-badb-767f9bc60ef5" port="22" nameFormat="DESCRIPTIVE" username="dh_98m6ks" />
+    </configs>
+  </component>
+</project>

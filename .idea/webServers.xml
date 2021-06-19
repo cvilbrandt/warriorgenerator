@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ae88ac32-164f-48de-910e-380371af0822" name="Dreamhost: Starclan">
+        <fileTransfer rootFolder="/home/dh_98m6ks/starclan.cvilbrandt.com" accessType="SFTP" host="starclan.cvilbrandt.com" port="22" sshConfigId="1d6fb8dc-ef4b-4080-badb-767f9bc60ef5" sshConfig="dh_98m6ks@starclan.cvilbrandt.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

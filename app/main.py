@@ -1,14 +1,17 @@
-from flask import Flask, render_template, request, redirect
+from flask import request, render_template, redirect
 
-from app.data import fur, clans, descriptors, entries_list
-from app.generator import generator
+from .data import fur, clans, descriptors, entries_list
+from .generator import generator
 
-app = Flask(__name__)
+# app = Flask(__name__)
+from app import flask_app
+
 
 # Display Index Page
-@app.route('/')
+@flask_app.route('/')
+@flask_app.route('/index')
 def index():
-    # print(request.args)
+    print(request.args)
     if request.args and "deselect" not in request.args.keys():
         selected_entry = int(request.args["Entries"])
         options = request.args.getlist('options')
@@ -29,7 +32,7 @@ def index():
     return render_template('index.tpl', results = results, fur = fur, clans = clans, descriptors = descriptors,
                            selected = selected, entries = entries_list, selected_entry = selected_entry)
 
-app.run(host='0.0.0.0', port= 8090)
+# app.run(host='0.0.0.0', port= 8090)
 
 # V1.0 TO DO LIST:
 # - Finish assigning descriptors & clans
