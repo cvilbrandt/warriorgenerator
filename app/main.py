@@ -1,3 +1,5 @@
+import os
+
 from flask import request, render_template, redirect
 
 from .data import fur, clans, descriptors, entries_list
@@ -5,7 +7,6 @@ from .generator import generator
 
 # app = Flask(__name__)
 from app import flask_app
-
 
 # Display Index Page
 @flask_app.route('/')
@@ -32,12 +33,12 @@ def index():
     return render_template('index.tpl', results = results, fur = fur, clans = clans, descriptors = descriptors,
                            selected = selected, entries = entries_list, selected_entry = selected_entry)
 
-# app.run(host='0.0.0.0', port= 8090)
+if os.getenv("RUNLOCALLY") == "true":
+    flask_app.run(host='0.0.0.0', port= 8090)
 
 # V1.0 TO DO LIST:
 # - Finish assigning descriptors & clans
 # - Add percentage to General names
-# - Hook up to Dreamhost
 # - Get rid of names that have three letters in a row
 # - Add other CSS to make it pretty UwU
 
